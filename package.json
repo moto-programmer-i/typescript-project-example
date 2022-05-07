@@ -2,7 +2,6 @@
   "name": "typescript-project-example",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --hot --open",
     "build": "webpack --config webpack.prod.js"

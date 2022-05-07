@@ -1,7 +1,9 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-// 参考 https://webpack.js.org/guides/production/
+// 参考
+// https://webpack.js.org/guides/production/
+// https://webpack.js.org/guides/typescript/
 module.exports = {
   entry: './src/index.ts',
   module: {

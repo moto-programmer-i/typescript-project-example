@@ -4,7 +4,7 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --hot --open",
-    "license": "license-report --output=html > ./resources/third-party-licenses/third-party-licenses.html",
+    "license": "license-report --fields=name --fields=author --fields=licenseType --fields=link --fields=installedVersion --output=html > ./resources/third-party-licenses/third-party-licenses.html",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],

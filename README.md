@@ -40,5 +40,5 @@ npm run build
 
 # 開発環境
 * Windows 10 Home
-* Node.js v16.14.0
-* npm 8.5.4
+* Node.js v16.15.0
+* npm 8.5.5

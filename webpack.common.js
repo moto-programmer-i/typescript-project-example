@@ -24,10 +24,10 @@ module.exports = {
 			template: './src/index.html'
 		}),
 
-    // リソースファイルはコピーするだけ
+    // 外部ライブラリのライセンスHTMLはコピーするだけ、キャッシュ問題は保留
     new CopyWebpackPlugin({
       patterns: [
-        {from: './resources/', to: 'resources'}
+        {from: './src/third-party-licenses.html'}
       ]
     })
 	],

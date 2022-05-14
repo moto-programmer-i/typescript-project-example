@@ -1,6 +1,5 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // 参考
 // https://webpack.js.org/guides/production/
@@ -24,12 +23,13 @@ module.exports = {
 			template: './src/index.html'
 		}),
 
-    // 外部ライブラリのライセンスHTMLはコピーするだけ、キャッシュ問題は保留
-    new CopyWebpackPlugin({
-      patterns: [
-        {from: './src/third-party-licenses.html'}
-      ]
-    })
+    // 外部ライブラリの権利情報HTML
+		new HtmlWebpackPlugin({
+			template: './src/third-party-licenses.html',
+      filename: 'third-party-licenses.html',
+      // 表示だけのHTMLなので、bundle.jsは不要
+      inject: false
+		})
 	],
   output: {
     path: path.resolve(__dirname, 'dist'),

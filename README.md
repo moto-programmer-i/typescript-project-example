@@ -33,3 +33,12 @@ npm run build
 ```
 <br>
 
+   
+
+<br>
+<br>
+
+# 開発環境
+* Windows 10 Home
+* Node.js v16.14.0
+* npm 8.5.4

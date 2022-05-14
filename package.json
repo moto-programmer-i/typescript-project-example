@@ -4,13 +4,16 @@
   "description": "",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js --hot --open",
+    "license": "license-report --output=html > ./resources/third-party-licenses/third-party-licenses.html",
     "build": "webpack --config webpack.prod.js"
   },
   "keywords": [],
   "author": "",
   "license": "WTFPLV2",
   "devDependencies": {
+    "copy-webpack-plugin": "^10.2.4",
     "html-webpack-plugin": "^5.5.0",
+    "license-report": "^5.0.2",
     "ts-loader": "^9.2.8",
     "typescript": "^4.6.2",
     "webpack": "^5.71.0",

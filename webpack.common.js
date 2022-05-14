@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 // 参考
 // https://webpack.js.org/guides/production/
@@ -12,7 +13,7 @@ module.exports = {
         test: /\.tsx?$/,
         use: 'ts-loader',
         exclude: /node_modules/,
-      },
+      }
     ],
   },
   resolve: {
@@ -21,7 +22,14 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			template: './src/index.html'
-		})
+		}),
+
+    // リソースファイルはコピーするだけ
+    new CopyWebpackPlugin({
+      patterns: [
+        {from: './resources/', to: 'resources'}
+      ]
+    })
 	],
   output: {
     path: path.resolve(__dirname, 'dist'),

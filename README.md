@@ -20,6 +20,13 @@ npm start
 <br>
 
 
+外部ライブラリのライセンス更新
+```
+npm run license
+```
+<br>
+
+
 ビルド
 ```
 npm run build
